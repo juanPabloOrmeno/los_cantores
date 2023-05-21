@@ -20,8 +20,8 @@ jobs:
 
     - name: login dockerhub
       env:
-        DOCKER_USER:  ${{ secret.DOCKER_USER }}
-        DOCKER_PASS:  ${{ secret.DOCKER_PASS }}
+        DOCKER_USER:  ${{ secrets.DOCKER_USER }}
+        DOCKER_PASS:  ${{ secrets.DOCKER_PASS }}
       run: |
         echo "Iniciando login"
         docker login -u $DOCKER_USER -p $DOCKER_PASS
