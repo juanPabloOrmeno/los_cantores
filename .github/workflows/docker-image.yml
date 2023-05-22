@@ -30,9 +30,11 @@ jobs:
     - name: build image
       run: |
         docker build -t jormeno2020/los_cantores_pizzeria:0.0.1 .
+        docker build -t jormeno2020/los_cantores_pizzeria .
 
     - name: push image
       run: |
         docker push jormeno2020/los_cantores_pizzeria:0.0.1
+        docker push jormeno2020/los_cantores_pizzeria
 
       
