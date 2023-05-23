@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  loscantores:
+    image: jormeno2020/los_cantores_pizzeria:0.0.1
+    container_name: "losCantores"
+    restart: always
+    networks:
+      - traefik-local
+    labels:
+      - "traefik.http.routers.losCantores.rule=Host(`loscantores.cl`)"
+
+networks:
+  traefik-local:
+    external: true
+     
+
+
+
